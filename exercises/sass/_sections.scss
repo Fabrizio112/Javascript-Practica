@@ -1,0 +1,212 @@
+#section-sections {
+    @include tamanio(80%, 100%);
+}
+
+
+[id*=section] {
+    @include tamanio(100%, 120vh);
+    @include flex(column, start, center);
+    text-align: center;
+    gap: 2rem;
+
+    h2 {
+        margin-top: 4rem;
+    }
+
+}
+
+#section1 {
+    #container-clock {
+        span {
+            font-size: 10rem;
+        }
+    }
+
+    #container-buttons {
+        display: flex;
+        gap: 1rem;
+
+        button {
+            @extend .button;
+        }
+    }
+}
+
+#section2 {
+    #container-ball {
+        @include tamanio(80%, 60vh);
+        @include flex(row, center, center);
+        background-color: black;
+
+        #ball {
+            border-radius: 50%;
+            background-color: yellow;
+            padding: 2rem;
+            position: relative;
+        }
+    }
+}
+
+#section3 {
+    #contenedor-countdown {
+        span {
+            font-size: 1.6rem;
+            font-weight: bolder;
+        }
+    }
+}
+
+#section4 {
+    @include tamanio(100%, 180vh);
+
+    #container-frames {
+        @include tamanio(100%, 80%);
+        @include flex(column, center, center);
+        gap: 1rem;
+
+        iframe {
+            width: 80%;
+            height: 50%;
+        }
+    }
+}
+
+#section5 {
+    form {
+        @include flex (column, center, center);
+        gap: 1rem;
+
+        label,
+        input {
+            font-size: 2rem;
+        }
+
+        #form-buttons {
+            button {
+                @extend .button;
+            }
+        }
+    }
+}
+
+#section7 {
+    video {
+        @include tamanio(100%, 100%);
+    }
+}
+
+#section10 {
+    #cards {
+        @include flex(row, space-evenly, center);
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        #card {
+            figcaption {
+                background-color: grey;
+                font-size: 2rem;
+                color: white;
+            }
+        }
+    }
+}
+
+#section12 {
+    h2 {
+        @include tamanio(100%, 20%)
+    }
+
+    #slider-container {
+        @include tamanio(90%, 80%);
+        @include flex(row, center, center);
+        position: relative;
+
+        div {
+            @include tamanio(100%, 90%);
+            position: absolute;
+            transition: all .5s ease-in-out;
+            opacity: 0;
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                background-color: black;
+                color: white
+            }
+
+            img {
+                @include tamanio(100%, 100%)
+            }
+        }
+
+        aside {
+            @include tamanio(100px, 100px);
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 3;
+
+        }
+    }
+}
+
+#section14 {
+    #container-video {
+        @include tamanio(80%, 80%);
+
+        video {
+            @include tamanio(100%, 100%);
+        }
+    }
+}
+
+#section15 {
+    form {
+        @include tamanio(100%, 80%);
+        @include flex(column, start, center);
+        gap: 2rem;
+
+        input,
+        textarea {
+            @extend .input;
+            resize: none;
+        }
+
+        button {
+            @extend .button;
+            padding: 1.5rem 10rem;
+            border-radius: 20px;
+        }
+    }
+}
+
+#section16 {
+    select {
+        @extend .input;
+    }
+
+    textarea {
+        @extend .input;
+        height: 50%;
+        resize: none;
+    }
+
+    button {
+        @extend .button;
+        padding: 0.5rem;
+    }
+}
+
+.visible {
+    z-index: 1;
+    opacity: 1 !important;
+}
+
+#left-btn {
+    left: 0;
+    cursor: pointer;
+}
+
+#right-btn {
+    right: 0;
+    cursor: pointer;
+}

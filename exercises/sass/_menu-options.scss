@@ -1,0 +1,39 @@
+#section-menu {
+    @include tamanio(20%, 100%);
+    position: fixed;
+    right: 0;
+    z-index: 1;
+
+    #menu-options {
+        @include tamanio(100%, 100%);
+        z-index: 2;
+        background-color: #000000b3;
+
+        ul {
+            @include tamanio(100%, 100%);
+            @include flex(column, start, center);
+            overflow-y: auto;
+
+            li {
+                list-style: none;
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0;
+                transition: all .3s ease;
+
+
+
+                a {
+                    text-decoration: none;
+                    color: $color-pagina;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    color: black !important;
+    font-weight: bolder;
+}

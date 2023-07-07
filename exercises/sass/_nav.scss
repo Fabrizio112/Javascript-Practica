@@ -1,0 +1,12 @@
+nav {
+    @include tamanio(100%, 12vh);
+    @include flex(row, center, center);
+    background-color: $color-pagina;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    h1 {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Ejercicios de Javascript de John Mircha</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Ejercicios del DOM</h1>
+    </nav>
+    <main>
+        <div id="hamburger-menu">
+            <i id="menu" class="fa-solid fa-bars fa-3x menu"></i>
+            <i id="cross" class="fa-solid fa-xmark fa-3x menu"></i>
+        </div>
+        <div id="upper-button" class="menu">
+            <i class="fa-solid fa-arrow-up fa-3x"></i>
+        </div>
+        <div id="dark-mode" class="menu">
+            <i id="moon" class="fa-solid fa-moon fa-3x"></i>
+            <i id="sun" class="fa-solid fa-sun fa-3x"></i>
+        </div>
+        <section id="section-menu">
+            <div id="menu-options">
+                <ul>
+                    <li><a href="#section1">Reloj Digital y Alarma Sonora</a></li>
+                    <li><a href="#section2">Eventos del Teclado</a></li>
+                    <li><a href="#section3">CountDown</a></li>
+                    <li><a href="#section4">Responsive con Javascript</a></li>
+                    <li><a href="#section5">Responsive Tester</a></li>
+                    <li><a href="#section6">Deteccion de Dispositivos</a></li>
+                    <li><a href="#section7">Deteccion de Camara Web</a></li>
+                    <li><a href="#section8">Geolocalizacion</a></li>
+                    <li><a href="#section9">Deteccion de la Conexion</a></li>
+                    <li><a href="#section10">Filtro de Busquedas</a></li>
+                    <li><a href="#section11">Sorteo Digital</a></li>
+                    <li><a href="#section12">Responsive Slide</a></li>
+                    <li><a href="#section13">Intersection Observer API para barra de Navegacion</a></li>
+                    <li><a href="#section14">Video Inteligente</a></li>
+                    <li><a href="#section15">Formulario de Contacto (Validaciones)</a></li>
+                    <li><a href="#section16">Narrador</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section-sections">
+            <div id="section1">
+                <h2>Reloj Digital y Alarma Sonora </h2>
+                <div id="container-clock">
+
+                </div>
+                <div id="container-buttons">
+                    <button id="start-clock">Iniciar Reloj</button>
+                    <button id="stop-clock">Detener Reloj</button>
+                    <button id="start-alarm">Iniciar Alarma</button>
+                    <button id="stop-alarm">Detener Alarma</button>
+                </div>
+                <audio id="audio" src="./audio/clock-alarm-8761.mp3" loop></audio>
+
+            </div>
+            <div id="section2">
+                <h2>Eventos del Teclado</h2>
+                <div id="container-ball">
+                    <span id="ball"></span>
+                </div>
+            </div>
+            <div id="section3">
+                <h2>CountDown</h2>
+                <div id="contenedor-countdown">
+                    <span id="resultados"></span>
+                </div>
+            </div>
+            <div id="section4">
+                <h2>Responsive Con Javascript</h2>
+                <div id="container-frames">
+                    <iframe id="video-frame" width="560" height="315" src="https://www.youtube.com/embed/16geDhp5Xmg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <iframe id="map-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25433368.012443893!2d153.77497944009937!3d-38.90890844486746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d2c200e17779687%3A0xb1d618e2756a4733!2sNueva%20Zelanda!5e0!3m2!1ses-419!2sar!4v1684780185834!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div id="section5">
+                <h2>Responsive Tester</h2>
+                <form action="" id="form">
+                    <label for="">Pagina Web Objetivo :</label>
+                    <input name="direccion" type="url" placeholder="Pagina Web" required>
+                    <label for="">Width :</label>
+                    <input name="ancho" type="number" placeholder="Ancho" required>
+                    <label for="">Height :</label>
+                    <input name="alto" type="number" placeholder="Alto" requireds>
+                    <br>
+                    <input type="submit" name="probar" value="Probar">
+                    <input type="button" name="cerrar" value="Cerrar">
+                </form>
+            </div>
+            <div id="section6">
+                <h2>Deteccion de Dispostivos <br> (User Agent)</h2>
+                <div id="user-devices">
+
+                </div>
+            </div>
+            <div id="section7">
+                <h2>Deteccion de Camara Web</h2>
+                <video id="camara" src="" autoplay>Video Not Avalailabe</video>
+            </div>
+            <div id="section8">
+                <h2>Geolocalizacion</h2>
+            </div>
+            <div id="section9">
+                <h2>Deteccion de la Conexion (ONLINE,OFFLINE)</h2>
+            </div>
+            <div id="section10">
+                <h2>Filtro de Busquedas</h2>
+                <input id="filter-search" type="search" placeholder="Buscar..." name="filter-search">
+                <section id="cards">
+                    <figure id="card">
+                        <img src="https://placeimg.com/200/200/nature" alt="Nature">
+                        <figcaption>Nature</figcaption>
+                    </figure>
+                    <figure id="card">
+                        <img src="https://placeimg.com/200/200/tech" alt="Tech">
+                        <figcaption>Technology</figcaption>
+                    </figure>
+                    <figure id="card">
+                        <img src="https://placeimg.com/200/200/any" alt="Any">
+                        <figcaption>Any</figcaption>
+                    </figure>
+                    <figure id="card">
+                        <img src="https://placeimg.com/200/200/animals" alt="Animals">
+                        <figcaption>Animals</figcaption>
+                    </figure>
+                    <figure id="card">
+                        <img src="https://placeimg.com/200/200/people" alt="People">
+                        <figcaption>People</figcaption>
+                    </figure>
+                    <figure id="card">
+                        <img src="https://placeimg.com/200/200/arch" alt="Arch">
+                        <figcaption>Arch</figcaption>
+                    </figure>
+                </section>
+            </div>
+            <div id="section11">
+                <h2>Sorteo Digital</h2>
+                <ul id="lista-items">
+                    <li>Javascript</li>
+                    <li>PHP</li>
+                    <li>JAVA</li>
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>Ruby</li>
+                    <li>Go</li>
+                    <li>Visual Basic</li>
+                    <li>Rust</li>
+                    <li>Perl</li>
+                </ul>
+                <button id="button-random" type="button">Obtener Ganador</button>
+            </div>
+            <div id="section12">
+                <h2>Responsive Slider</h2>
+                <section id="slider-container">
+                    <div class="visible">
+                        <img src="./imagenes/exercise.jpg" alt="Ejercicio">
+                    </div>
+                    <div>
+                        <span>2</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non voluptas at cumque ipsa,
+                            nobis
+                            neque accusamus, suscipit commodi fuga laboriosam eum odit pariatur ratione culpa eius ullam
+                            reiciendis consequuntur!
+                            Quia laudantium rerum deserunt voluptates obcaecati illo. Dolore in iusto nostrum repellat
+                            sit
+                            provident excepturi maiores saepe, minus nisi praesentium natus dignissimos molestias alias
+                            dolorem
+                            aliquam eveniet ea doloribus delectus!</p>
+                    </div>
+                    <div>
+                        <img src="./imagenes/mountain.jpg" alt="Montaña">
+                    </div>
+                    <div>
+                        <span>4</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas autem est architecto facere
+                            quasi
+                            neque voluptas laborum ea officia perspiciatis atque aperiam minus minima, temporibus
+                            aliquid
+                            necessitatibus explicabo illo? Ipsum!
+                            Cumque laborum fuga sint, possimus ad enim fugiat quae, sit eligendi consequuntur similique
+                            accusantium adipisci. Itaque accusamus reprehenderit, aliquid error vitae nostrum libero
+                            repellendus
+                            adipisci excepturi, ex nulla, illum optio!</p>
+                    </div>
+                    <aside id="left-btn"></aside>
+                    <aside id="right-btn"></aside>
+                </section>
+            </div>
+            <div id="section13">
+                <h2>Intersection Observer API para barra de Navegacion</h2>
+            </div>
+            <div id="section14">
+                <h2>Video Inteligente</h2>
+                <div id="container-video">
+                    <video id="smart-video" src="./video/VID_20230420_135249.mp4" controls muted></video>
+                </div>
+            </div>
+            <div id="section15">
+                <h2>Formulario de Contacto (Validaciones)</h2>
+                <h3>Envianos tus Comentarios</h3>
+                <form id="contact-form" action="">
+                    <input name="name" type="text" placeholder="Escribe tu nombre"
+                        title="Nombre solo acepta letras y espacios en blanco" pattern="^[a-zA-Z ]+$" required>
+                    <input name="email" type="email" placeholder="Escribe tu email"
+                        pattern="/^[a-z0-9.-]{1,30}@([a-z]{1,20}\.)[a-z]{2,3}$/"
+                        title="Email incorrecto Ej: ejemplo@ejemplo.com" required>
+                    <input name="asunto" type="text" placeholder="Asunto a tratar" pattern="^[a-zA-Z0-9 ]+$"
+                        title="El asunto es requerido" required>
+                    <textarea cols="50" rows="5" name="comments" placeholder="Escribe tus Comentarios"
+                        title="Tu comentario no debe de exceder los 255 caracteres" required></textarea>
+                    <button type="button" class="send">Enviar</button>
+                    <div id="contact-form-loader">
+                        <img src="" alt="">
+                    </div>
+                    <div id="contact-form-response">
+                        <p>Los datos han sido enviados</p>
+                    </div>
+                </form>
+            </div>
+            <div id="section16">
+                <h2>Narrador</h2>
+                <select name="select-narrador" id="narrrador-options">
+                    <option value="Elegir una voz">----- Elige una voz -----</option>
+                </select>
+                <textarea name="texto-leer" id="texto-leer"
+                    placeholder="Ingrese el texto a leer por el traductor"></textarea>
+                <button id="narrar">Leer Texto</button>
+            </div>
+            <aside id="status-conection">
+                <span id="texto-conection"></span>
+            </aside>
+        </section>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/35195391d2.js" crossorigin="anonymous"></script>
+<script src="./javascript/src/index.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>

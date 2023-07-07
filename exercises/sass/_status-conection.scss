@@ -1,0 +1,9 @@
+#status-conection {
+    @include tamanio(100%, 6vh);
+    background-color: green;
+    position: fixed;
+    top: 4.6rem;
+    @include flex(row, center, center);
+    opacity: 0;
+    visibility: hidden;
+}

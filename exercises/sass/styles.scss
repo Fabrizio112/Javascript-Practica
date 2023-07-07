@@ -1,0 +1,27 @@
+@import "general";
+@import "main";
+@import "animations";
+@import "up-boton";
+@import "dark-mode";
+@import "menu";
+@import "menu-options";
+@import "nav";
+@import "sections";
+@import "status-conection";
+
+.dark-mode {
+    * :not(button, i, h1) {
+        color: yellow;
+    }
+
+    [id*=section] {
+        background-color: black;
+    }
+
+    #section2 {
+        #container-ball {
+            background-color: white;
+        }
+    }
+
+}

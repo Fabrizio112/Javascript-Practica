@@ -1,0 +1,51 @@
+@mixin tamanio($a, $b) {
+    width: $a;
+    height: $b;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$color-pagina: yellow;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.button {
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.input {
+    font-size: 1.5rem;
+    width: 80%;
+    padding: 0.5rem;
+}
+
+.invalid {
+    border: 3px solid red;
+}
+
+.valid {
+    border: 3px solid green;
+}
+
+.error {
+    background-color: red;
+    width: 80%;
+    margin-top: -2rem;
+    color: white;
+}

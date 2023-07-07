@@ -1,0 +1,375 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.button, #section16 button, #section15 form button, #section5 form #form-buttons button, #section1 #container-buttons button {
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.input, #section16 textarea, #section16 select, #section15 form input,
+#section15 form textarea {
+  font-size: 1.5rem;
+  width: 80%;
+  padding: 0.5rem;
+}
+
+.invalid {
+  border: 3px solid red;
+}
+
+.valid {
+  border: 3px solid green;
+}
+
+.error {
+  background-color: red;
+  width: 80%;
+  margin-top: -2rem;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: start;
+}
+
+@keyframes sacarElMenu {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes guardarElMenu {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+#upper-button {
+  right: initial;
+  left: 4rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#upper-button:hover {
+  background-color: black;
+}
+#upper-button:hover i {
+  color: yellow;
+}
+
+#dark-mode {
+  left: 1rem;
+  right: auto;
+}
+#dark-mode #sun {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 1rem;
+  background-color: yellow;
+  border-radius: 50%;
+  padding: 1.3rem;
+}
+.menu:hover {
+  cursor: pointer;
+}
+
+div #menu {
+  display: inline-block;
+}
+div #cross {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#section-menu {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+#section-menu #menu-options {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7019607843);
+}
+#section-menu #menu-options ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-y: auto;
+}
+#section-menu #menu-options ul li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+#section-menu #menu-options ul li a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 1rem;
+}
+
+.active {
+  color: black !important;
+  font-weight: bolder;
+}
+
+nav {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav h1 {
+  font-size: 3rem;
+}
+
+#section-sections {
+  width: 80%;
+  height: 100%;
+}
+
+[id*=section] {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+[id*=section] h2 {
+  margin-top: 4rem;
+}
+
+#section1 #container-clock span {
+  font-size: 10rem;
+}
+#section1 #container-buttons {
+  display: flex;
+  gap: 1rem;
+}
+#section2 #container-ball {
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+#section2 #container-ball #ball {
+  border-radius: 50%;
+  background-color: yellow;
+  padding: 2rem;
+  position: relative;
+}
+
+#section3 #contenedor-countdown span {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+#section4 {
+  width: 100%;
+  height: 180vh;
+}
+#section4 #container-frames {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#section4 #container-frames iframe {
+  width: 80%;
+  height: 50%;
+}
+
+#section5 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#section5 form label,
+#section5 form input {
+  font-size: 2rem;
+}
+#section7 video {
+  width: 100%;
+  height: 100%;
+}
+
+#section10 #cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#section10 #cards #card figcaption {
+  background-color: grey;
+  font-size: 2rem;
+  color: white;
+}
+
+#section12 h2 {
+  width: 100%;
+  height: 20%;
+}
+#section12 #slider-container {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#section12 #slider-container div {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+#section12 #slider-container div:nth-child(2), #section12 #slider-container div:nth-child(4) {
+  background-color: black;
+  color: white;
+}
+#section12 #slider-container div img {
+  width: 100%;
+  height: 100%;
+}
+#section12 #slider-container aside {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+}
+
+#section14 #container-video {
+  width: 80%;
+  height: 80%;
+}
+#section14 #container-video video {
+  width: 100%;
+  height: 100%;
+}
+
+#section15 form {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+#section15 form input,
+#section15 form textarea {
+  resize: none;
+}
+#section15 form button {
+  padding: 1.5rem 10rem;
+  border-radius: 20px;
+}
+
+#section16 textarea {
+  height: 50%;
+  resize: none;
+}
+#section16 button {
+  padding: 0.5rem;
+}
+
+.visible {
+  z-index: 1;
+  opacity: 1 !important;
+}
+
+#left-btn {
+  left: 0;
+  cursor: pointer;
+}
+
+#right-btn {
+  right: 0;
+  cursor: pointer;
+}
+
+#status-conection {
+  width: 100%;
+  height: 6vh;
+  background-color: green;
+  position: fixed;
+  top: 4.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dark-mode * :not(button, i, h1) {
+  color: yellow;
+}
+.dark-mode [id*=section] {
+  background-color: black;
+}
+.dark-mode #section2 #container-ball {
+  background-color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
